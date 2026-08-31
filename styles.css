@@ -1,0 +1,209 @@
+/* ════════════════════════════════════════
+   INVENTARIO TI — ESTILOS GLOBALES
+   Tema: Oscuro profesional
+════════════════════════════════════════ */
+
+/* ── FONDO Y BASE ── */
+.stApp {
+    background-color: #0E1117;
+    color: #FAFAFA;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── SIDEBAR ── */
+[data-testid="stSidebar"] {
+    background-color: #1A1D27;
+    border-right: 1px solid #2E75B6;
+}
+[data-testid="stSidebar"] * {
+    color: #FAFAFA !important;
+}
+
+/* ── TÍTULOS ── */
+h1 {
+    color: #2E75B6 !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #2E75B6;
+    padding-bottom: 10px;
+    margin-bottom: 20px !important;
+}
+h2, h3 {
+    color: #90CAF9 !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* ── MÉTRICAS / KPIs ── */
+[data-testid="metric-container"] {
+    background-color: #1A1D27;
+    border: 1px solid #2E75B6;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px #2E75B622;
+}
+[data-testid="metric-container"] label {
+    color: #90CAF9 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+[data-testid="metric-container"] [data-testid="stMetricValue"] {
+    color: #FFFFFF !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+/* ── BOTONES ── */
+.stButton > button {
+    background: linear-gradient(135deg, #1F4E79, #2E75B6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 8px 20px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px #2E75B633 !important;
+}
+.stButton > button:hover {
+    background: linear-gradient(135deg, #2E75B6, #1F4E79) !important;
+    box-shadow: 0 6px 20px #2E75B655 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ── INPUTS Y SELECTBOX ── */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background-color: #1A1D27 !important;
+    color: #FAFAFA !important;
+    border: 1px solid #2E75B6 !important;
+    border-radius: 8px !important;
+    transition: border-color 0.2s !important;
+}
+
+.stSelectbox > div > div {
+    background-color: #1A1D27 !important;
+    color: #FAFAFA !important;
+    border: 1px solid #2E75B6 !important;
+    border-radius: 8px !important;
+}
+
+/* ── TABLAS / DATAFRAME ── */
+.stDataFrame {
+    border: 1px solid #2E75B6 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* ── TABS ── */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: #1A1D27;
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+}
+.stTabs [data-baseweb="tab"] {
+    color: #90CAF9 !important;
+    font-weight: 600;
+    border-radius: 8px !important;
+    transition: all 0.2s !important;
+}
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #1F4E79, #2E75B6) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px #2E75B633 !important;
+}
+
+/* ── FORMULARIOS ── */
+[data-testid="stForm"] {
+    background-color: #1A1D27 !important;
+    border: 1px solid #2E75B6 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0 4px 20px #2E75B622 !important;
+}
+
+/* ── LOGIN: centrar formulario ── */
+div[data-testid="stForm"] {
+    max-width: 420px !important;
+    width: 100% !important;
+    background: linear-gradient(135deg, #1A1D27 0%, #0E1117 100%) !important;
+    border: 1px solid #2E75B6 !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    box-shadow: 0 8px 40px #2E75B655 !important;
+    margin: 0 auto !important;
+}
+div[data-testid="stForm"] .stFormSubmitButton button {
+    width: 100% !important;
+    background: linear-gradient(135deg, #1F4E79, #2E75B6) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    margin-top: 8px !important;
+    border: none !important;
+}
+div[data-testid="stForm"] .stFormSubmitButton button:hover {
+    background: linear-gradient(135deg, #2E75B6, #1F4E79) !important;
+}
+
+/* ── ALERTAS ── */
+.stSuccess {
+    background-color: #1B3A2D !important;
+    border: 1px solid #4CAF50 !important;
+    border-radius: 10px !important;
+}
+.stError {
+    background-color: #3A1B1B !important;
+    border: 1px solid #F44336 !important;
+    border-radius: 10px !important;
+}
+.stWarning {
+    background-color: #3A2E1B !important;
+    border: 1px solid #FF9800 !important;
+    border-radius: 10px !important;
+}
+
+/* ── DIVISOR ── */
+hr {
+    border-color: #2E75B6 !important;
+    opacity: 0.5;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0E1117;
+}
+::-webkit-scrollbar-thumb {
+    background: #2E75B6;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #90CAF9;
+}
+
+/* ── CAPTION Y TEXTO SECUNDARIO ── */
+.stCaption, small {
+    color: #90CAF9 !important;
+}
+
+/* ── DOWNLOAD BUTTON ── */
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #1B3A2D, #4CAF50) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+.stDownloadButton > button:hover {
+    background: linear-gradient(135deg, #4CAF50, #1B3A2D) !important;
+}

@@ -1,4 +1,10 @@
 streamlit
+streamlit-authenticator
+bcrypt
 psycopg2-binary
-pandas
 reportlab
+plotly
+pandas
+qrcode
+pillow
+PyYAML

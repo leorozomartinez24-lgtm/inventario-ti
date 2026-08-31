@@ -1,0 +1,20 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@inventarioti.com
+      name: Administrador
+      password: $2b$12$nUmRDNimEMchoNURIX3J7u5AFl/tIRgIcb9TzDeLMjrH4HF5Mw.8O
+      role: admin
+    jurado:
+      email: jurado@cun.edu.co
+      name: Jurado CUN
+      password: $2b$12$nUmRDNimEMchoNURIX3J7u5AFl/tIRgIcb9TzDeLMjrH4HF5Mw.8O
+      role: readonly
+
+cookie:
+  expiry_days: 1
+  key: inventario_ti_clave_secreta_2025
+  name: inventario_ti_cookie
+
+preauthorized:
+  emails: []

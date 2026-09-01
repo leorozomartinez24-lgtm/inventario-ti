@@ -164,14 +164,23 @@ def mostrar_actas():
                                      placeholder="Estado del equipo, accesorios incluidos, etc.")
 
         if activo and usuario_sel:
-            if st.button("📄 Generar Acta PDF", type="primary"):
-                ejecutar_query("""
-                    INSERT INTO actas_entrega (id_activo, id_usuario, observaciones)
-                    VALUES (%s, %s, %s)
-                """, (id_activo, usuario_sel[0], observaciones))
+                            if st.button("📄 Generar Acta PDF", type="primary"):
+                    ejecutar_query("""
+                        INSERT INTO actas_entrega (id_activo, id_usuario, observaciones)
+                        VALUES (%s, %s, %s)
+                    """, (id_activo, usuario_sel[0], observaciones))
 
-                pdf = generar_pdf_acta(a, usuario_sel, observaciones)
-                st.success("✅ Acta generada y guardada correctamente")
+                    from historial import registrar_cambio
+                    usuario_actual = st.session_state.get("username", "desconocido")
+                    registrar_cambio(
+                        "actas_entrega", id_activo, "generacion_acta",
+                        "—",
+                        f"Acta generada para activo: {a[1]} | Responsable: {usuario_sel[1]}",
+                        usuario_actual
+                    )
+
+                    pdf = generar_pdf_acta(a, usuario_sel, observaciones)
+                    st.success("✅ Acta generada y guardada correctamente")
                 st.download_button(
                     label="📥 Descargar Acta PDF",
                     data=pdf,
